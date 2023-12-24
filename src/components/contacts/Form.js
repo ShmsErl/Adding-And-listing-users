@@ -22,6 +22,7 @@ function Form({addContact, contacts}) {
     return (
         <div>
             <form onSubmit={onSubmit}>
+               
                 <div>
                     <label htmlFor="name">Name:</label>
                     <input name='name' type='text' placeholder='Name' onChange={onChangeInput} />
@@ -30,7 +31,10 @@ function Form({addContact, contacts}) {
                     <label htmlFor="surname">SurName:</label>
                     <input name='surname' type='text' placeholder='surname' onChange={onChangeInput} />
                 </div>
-                <button >Ekle</button>
+                <div className='btn-container'>
+                       <button className='btn'  >Ekle</button>
+                </div>
+             
 
 
             </form>
