@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import List from './List'
-import Form from './Form'
+import Form from './Form';
+import './style.css';
 
 function Contacts() {
     
-    const [contacts, setContacts] = useState([]);
+    const [contacts, setContacts] = useState([{
+        name:"Şeyhmus",
+        surname:'Erol'
+    }]);
 
 
     useEffect = (() => {
@@ -13,7 +17,9 @@ function Contacts() {
 
 
     return (
-        <div>
+
+        <div className='container'>
+            <h1 className='header'>Contact</h1>
             <List contacts={contacts} />
             <Form addContact={setContacts} contacts ={contacts} />
         </div>
